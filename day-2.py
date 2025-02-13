@@ -44,13 +44,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 model_lr = LogisticRegression()
 model_lr.fit(X_train, y_train)
+y_pred_lr = model_lr.predict(X_test)
 print('model_lr: ', model_lr)
 
 # detective questions: depth theory -> right balance
 model_dt = DecisionTreeClassifier(max_depth=5)  
 model_dt.fit(X_train, y_train)
 
-y_pred_lr = model_lr.predict(X_test)
 y_pred_dt = model_dt.predict(X_test)
 
 model_rf = RandomForestClassifier(n_estimators=100)
