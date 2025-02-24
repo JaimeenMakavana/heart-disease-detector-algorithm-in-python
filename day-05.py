@@ -53,8 +53,8 @@ class MultiArmedBandit:
         self.values[chosen_arm] = (self.values[chosen_arm] * (n - 1) + reward) / n
 
 # Arms and true click rates
-arms = ["Discount", "New Connection", "Trending Post"]
-true_click_rates = [0.05, 0.10, 0.30]
+arms = ["Discount", "New Connection", "Trending Post","Job"]
+true_click_rates = [0.05, 0.10, 0.30, 0.40]
 
 bandit = MultiArmedBandit(len(arms))
 iterations = 1000
